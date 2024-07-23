@@ -1,0 +1,27 @@
+{
+  "name": "easy-precise-timer",
+  "version": "0.1.22",
+  "description": "",
+  "main": "dist/timer.cjs.js",
+  "module": "dist/timer.mjs.js",
+  "browser": "dist/timer.umd.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "r-publish": "npm config set registry https://registry.npmjs.org && npm run build && npm version patch && npm publish",
+    "postpublish": "npm config set registry https://registry.npmmirror.com"
+  },
+  "keywords": [
+    "precise-timer",
+    "setTimeout"
+  ],
+  "author": "wdd",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.24.8",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.19.0"
+  }
+}
